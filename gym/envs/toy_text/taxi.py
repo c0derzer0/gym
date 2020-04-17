@@ -78,6 +78,7 @@ class TaxiEnv(discrete.DiscreteEnv):
         max_row = num_rows - 1
         max_col = num_columns - 1
         initial_state_distrib = np.zeros(num_states)
+        #initial_state_distrib[231] += 1
         num_actions = 6
         P = {state: {action: []
                      for action in range(num_actions)} for state in range(num_states)}
@@ -122,6 +123,8 @@ class TaxiEnv(discrete.DiscreteEnv):
                             P[state][action].append(
                                 (1.0, new_state, reward, done))
         initial_state_distrib /= initial_state_distrib.sum()
+        initial_state_distrib[:] = 0
+        initial_state_distrib[231] = 1
         discrete.DiscreteEnv.__init__(
             self, num_states, num_actions, P, initial_state_distrib)
 
