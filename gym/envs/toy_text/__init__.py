@@ -10,3 +10,6 @@ from gym.envs.toy_text.cliffwalking import CliffWalkingEnv
 from gym.envs.toy_text.taxi import TaxiEnv
 from gym.envs.toy_text.guessing_game import GuessingGame
 from gym.envs.toy_text.hotter_colder import HotterColder
+from gym.envs.toy_text.elevators import ElevatorsEnv
+from gym.envs.toy_text.crossing_traffic import CrossingTrafficEnv
+from gym.envs.toy_text.skill_teaching import SkillTeachingEnv

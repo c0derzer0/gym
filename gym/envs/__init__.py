@@ -199,6 +199,21 @@ register(
     max_episode_steps=200,
 )
 
+register(
+    id='Elevators-v0',
+    entry_point='gym.envs.toy_text:ElevatorsEnv'
+)
+
+register(
+    id='CrossingTraffic-v0',
+    entry_point='gym.envs.toy_text:CrossingTrafficEnv'
+)
+
+register(
+    id='SkillTeaching-v0',
+    entry_point='gym.envs.toy_text:SkillTeachingEnv'
+)
+
 # Mujoco
 # ----------------------------------------
 
